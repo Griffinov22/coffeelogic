@@ -1,0 +1,51 @@
+.nav {
+  border-right: 2px solid black;
+  width: 40vw;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background-color: white;
+  z-index: 2;
+}
+.nav-btn {
+  display: block;
+  position: absolute;
+  padding: 7px;
+  width: 60px;
+  aspect-ratio: 1/1;
+  font-size: 2em;
+  text-align: right;
+  left: calc(40vw - 30px);
+  top: 50%;
+  transform: translateY(-50%);
+  border: 2px solid black;
+  border-radius: 50%;
+  background-color: white;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.nav-title {
+  font-family: var(--h-font);
+  border-bottom: 2px solid black;
+  padding: 10px 5px;
+}
+
+.nav-ul {
+  flex: 4;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+}
+
+.nav-item {
+  border-bottom: 2px solid black;
+  padding: 10px 4px;
+  font-size: 1.2rem;
+}

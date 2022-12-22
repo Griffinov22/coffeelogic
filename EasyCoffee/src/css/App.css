@@ -1,0 +1,9 @@
+:root {
+  --h-font: "Abril Fatface", cursive;
+  --b-font: "Rajdhani", sans-serif;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
