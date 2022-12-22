@@ -17,11 +17,7 @@
   left: calc(-40vw - 4px);
 }
 .left-btn {
-<<<<<<< HEAD
-  left: 0;
-=======
   left: calc(40vw - 25px);
->>>>>>> e3fc5b0c3547aa39adecc3f0519216d2bf5351ed
 }
 
 .nav-title {
