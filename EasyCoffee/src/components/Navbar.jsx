@@ -2,16 +2,18 @@ import React from "react";
 import "../css/nav.css";
 
 export default function Navbar() {
-  const [navOpen, setNavOpen] = React.useState(false);
-  console.log(navOpen);
+  const nav = React.useRef(null);
 
-  const btnStyle = {
-    left: "-26px",
-  };
+  function closeOpenNavbar(e) {
+    nav.current.classList.toggle("left");
+    // css 'left' position will not override for buttons?????
+    e.target.style.left =
+      e.target.style.left == "-25px" ? "calc(40vw - 25px)" : "-25px";
+  }
 
   return (
     <>
-      <nav className={`nav ${navOpen ? "left" : ""}`}>
+      <nav className="nav left" ref={nav}>
         <h2 className="nav-title">What's Brewin'?</h2>
         <ul className="nav-lst">
           <li className="list-item">Pour Over Coffee</li>
@@ -24,8 +26,8 @@ export default function Navbar() {
       </nav>
       <button
         className={`nav-btn`}
-        style={navOpen ? btnStyle : {}}
-        onClick={() => setNavOpen(!navOpen)}
+        onClick={closeOpenNavbar}
+        style={{ left: "-25px" }}
       >
         &gt;
       </button>
