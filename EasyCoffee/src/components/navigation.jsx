@@ -20,7 +20,6 @@ export default function Navigation(props) {
           <li className="nav-item">Tea</li>
           <li className="nav-item">How did Griffin Create that?</li>
           <li className="nav-item">Griffin's Obnoxious Coffee Lingo</li>
-          <li>heelo</li>
         </ul>
       </nav>
       <button className="nav-btn" onClick={closeNav}>
