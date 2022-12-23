@@ -1,11 +1,15 @@
 import { useState } from "react";
-import Navbar from "./components/Navbar";
 import "./css/app.css";
+import Navbar from "./components/Navbar";
+import HomePage from "./components/pages/homePage";
 
 function App() {
+  const [currentPage, setWebpages] = useState(<HomePage />);
+
   return (
     <>
-      <Navbar />
+      <Navbar setWebpages={setWebpages} />
+      {currentPage}
     </>
   );
 }
