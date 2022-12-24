@@ -23,11 +23,20 @@ label {
 
 .flex-coffee-boxes {
   display: flex;
+  position: relative;
   justify-content: space-around;
   align-items: center;
   width: 70%;
   margin: 0 auto;
   padding-bottom: 2rem;
+}
+.flex-coffee-boxes:has(input:focus)::after {
+  content: "You are currently using a 1 to 16 ratio.";
+  position: absolute;
+  bottom: -20%;
+  font-size: 1rem;
+  font-style: italic;
+  color: rgb(98, 97, 97);
 }
 
 .flex-item {
@@ -41,7 +50,7 @@ label {
   padding: 10px;
 }
 .ratio-numbers {
-  width: 60%;
+  width: 70%;
   font-size: 1.8rem;
   text-align: right;
   position: relative;

@@ -9,12 +9,13 @@ import CoffeeDrinks from "./pages/coffeeDrinks";
 
 export default function Navbar({ setWebpages }) {
   const nav = React.useRef(null);
+  const navBtn = React.useRef(null);
 
-  function closeOpenNavbar(e) {
+  function closeOpenNavbar() {
     nav.current.classList.toggle("left");
     // css 'left' position will not override for buttons?????
-    e.target.style.left =
-      e.target.style.left == "-25px" ? "calc(40vw - 25px)" : "-25px";
+    navBtn.current.style.left =
+      navBtn.current.style.left == "-25px" ? "calc(40vw - 25px)" : "-25px";
   }
 
   return (
@@ -22,36 +23,64 @@ export default function Navbar({ setWebpages }) {
       <nav className="nav left" ref={nav}>
         <h2 className="nav-title">What's Brewin'?</h2>
         <ul className="nav-lst">
-          <li className="list-item" onClick={() => setWebpages(<Pourover />)}>
+          <li
+            className="list-item"
+            onClick={() => {
+              closeOpenNavbar();
+              setWebpages(<Pourover />);
+            }}
+          >
             Pour Over Coffee
           </li>
           <li
             className="list-item"
-            onClick={() => setWebpages(<FrenchPress />)}
+            onClick={() => {
+              closeOpenNavbar();
+              setWebpages(<FrenchPress />);
+            }}
           >
             French Press
           </li>
-          <li className="list-item" onClick={() => setWebpages(<Espresso />)}>
+          <li
+            className="list-item"
+            onClick={() => {
+              closeOpenNavbar();
+              setWebpages(<Espresso />);
+            }}
+          >
             Espresso
           </li>
-          <li className="list-item" onClick={() => setWebpages(<Tea />)}>
+          <li
+            className="list-item"
+            onClick={() => {
+              closeOpenNavbar();
+              setWebpages(<Tea />);
+            }}
+          >
             Tea
           </li>
           <li
             className="list-item"
-            onClick={() => setWebpages(<CoffeeTerms />)}
+            onClick={() => {
+              closeOpenNavbar();
+              setWebpages(<CoffeeTerms />);
+            }}
           >
             Griffin's Crazy Coffee Terms
           </li>
           <li
             className="list-item"
-            onClick={() => setWebpages(<CoffeeDrinks />)}
+            onClick={() => {
+              closeOpenNavbar();
+              setWebpages(<CoffeeDrinks />);
+            }}
           >
             How did Griffin Make That Drink?
           </li>
         </ul>
       </nav>
       <button
+        ref={navBtn}
         className={`nav-btn`}
         onClick={closeOpenNavbar}
         style={{ left: "-25px" }}

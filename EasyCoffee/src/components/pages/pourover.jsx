@@ -1,12 +1,48 @@
 import "../../css/pourover.css";
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 
 export default function Pourover() {
-  const [labels, setLabels] = useState({ coffeeLabel: 18, waterLabel: 350 });
+  //these will become numbers, but need to open strings to show placeholders
+  const [labels, setLabels] = useState({
+    coffeeLabel: "",
+    waterLabel: "",
+    mugType: "",
+  });
 
   function userChange(e) {
     const { name, value } = e.target;
-    setLabels((oldLabels) => ({ ...oldLabels, [name]: value }));
+    name === "coffeeLabel"
+      ? setLabels({ mugType: "", coffeeLabel: value, waterLabel: value * 16 })
+      : setLabels({ mugType: "", waterLabel: value, coffeeLabel: value / 16 });
+  }
+
+  function changeRadio(e) {
+    const { name, value } = e.target;
+    //coffee ratio yeti(21g to 350g), mug-r(18g to 270g), mug-sm(15g to 225g), chemex(60g to 1000g)
+    let coffeeMass, waterMass;
+    switch (value) {
+      case "yeti":
+        coffeeMass = 21;
+        waterMass = 350;
+        break;
+      case "mug-r":
+        coffeeMass = 18;
+        waterMass = 270;
+        break;
+      case "mug-sm":
+        coffeeMass = 15;
+        waterMass = 225;
+        break;
+      case "chemex":
+        coffeeMass = 60;
+        waterMass = 1000;
+    }
+
+    setLabels({
+      coffeeLabel: coffeeMass,
+      waterLabel: waterMass,
+      [name]: value,
+    });
   }
 
   return (
@@ -60,9 +96,11 @@ export default function Pourover() {
               <input
                 className="input-item"
                 type="radio"
-                name="mug-type"
+                name="mugType"
                 value="yeti"
                 id="yeti"
+                checked={labels.mugType === "yeti"}
+                onChange={changeRadio}
               />
               Yeti
             </label>
@@ -71,9 +109,11 @@ export default function Pourover() {
               <input
                 className="input-item"
                 type="radio"
-                name="mug-type"
+                name="mugType"
                 value="mug-r"
                 id="mug-r"
+                checked={labels.mugType === "mug-r"}
+                onChange={changeRadio}
               />
               Mug (regular)
             </label>
@@ -82,9 +122,11 @@ export default function Pourover() {
               <input
                 className="input-item"
                 type="radio"
-                name="mug-type"
+                name="mugType"
                 value="mug-sm"
                 id="mug-sm"
+                checked={labels.mugType === "mug-sm"}
+                onChange={changeRadio}
               />
               Mug (small)
             </label>
@@ -93,9 +135,11 @@ export default function Pourover() {
               <input
                 className="input-item"
                 type="radio"
-                name="mug-type"
+                name="mugType"
                 value="chemex"
                 id="chemex"
+                checked={labels.mugType === "chemex"}
+                onChange={changeRadio}
               />
               Chemex
             </label>
