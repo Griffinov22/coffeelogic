@@ -1,6 +1,14 @@
 import "../../css/pourover.css";
+import React, { useState } from "react";
 
 export default function Pourover() {
+  const [labels, setLabels] = useState({ coffeeLabel: 18, waterLabel: 350 });
+
+  function userChange(e) {
+    const { name, value } = e.target;
+    setLabels((oldLabels) => ({ ...oldLabels, [name]: value }));
+  }
+
   return (
     <div className="pourover-container">
       <div className="header">
@@ -9,13 +17,29 @@ export default function Pourover() {
 
       <div className="flex-coffee-boxes">
         <div className="flex-item" id="coffee-box">
-          <input type="number" className="ratio-numbers" placeholder="18" />
+          <input
+            type="number"
+            className="ratio-numbers"
+            placeholder="18"
+            name="coffeeLabel"
+            value={labels.coffeeLabel}
+            onChange={userChange}
+          />
           <p className="grams-label">g</p>
-          <h3 className="ratio-title">Coffee</h3>
+          <h3 className="ratio-title" id="coffee-title">
+            Coffee
+          </h3>
         </div>
         <p className="to">to</p>
         <div className="flex-item" id="water-box">
-          <input type="number" className="ratio-numbers" placeholder="350" />
+          <input
+            type="number"
+            className="ratio-numbers"
+            placeholder="350"
+            name="waterLabel"
+            value={labels.waterLabel}
+            onChange={userChange}
+          />
           <p className="grams-label">g</p>
 
           <h3 id="water-title" className="ratio-title">
@@ -97,7 +121,7 @@ export default function Pourover() {
             The pour-over is one of easiest and fastest ways to make coffee in
             the morning, but you might think that it is complex. If you do not
             follow the steps, you might find that your coffee is
-            <span>weak</span> (over extracted) or <span>bitter</span> (over
+            <span> weak</span> (over extracted) or <span>bitter</span> (over
             extracted), but once you get it down once or twice. It's easy and
             replicable.
           </p>
