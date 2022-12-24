@@ -2,7 +2,7 @@ import "../../css/pourover.css";
 
 export default function Pourover() {
   return (
-    <>
+    <div className="pourover-container">
       <div className="header">
         <h1>Pour-Over Ratio</h1>
       </div>
@@ -96,13 +96,13 @@ export default function Pourover() {
           <p className="pourover-text">
             The pour-over is one of easiest and fastest ways to make coffee in
             the morning, but you might think that it is complex. If you do not
-            follow the steps, you might find that your coffee is{" "}
+            follow the steps, you might find that your coffee is
             <span>weak</span> (over extracted) or <span>bitter</span> (over
             extracted), but once you get it down once or twice. It's easy and
             replicable.
           </p>
         </div>
       </main>
-    </>
+    </div>
   );
 }

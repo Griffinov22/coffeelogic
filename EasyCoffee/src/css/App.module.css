@@ -1,6 +1,11 @@
 :root {
   --hfont: "Crete Round", serif;
   --bfont: "Nunito", sans-serif;
+
+  --bgColor: #5a3e36;
+  --accentColor: #d9b382;
+  --textColor: #2c2b2b;
+  --btnColor: #d79b73;
 }
 
 * {
