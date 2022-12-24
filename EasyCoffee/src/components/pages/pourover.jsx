@@ -9,12 +9,15 @@ export default function Pourover() {
 
       <div className="flex-coffee-boxes">
         <div className="flex-item" id="coffee-box">
-          <h2 className="ratio-numbers">16 g</h2>
+          <input type="number" className="ratio-numbers" placeholder="18" />
+          <p className="grams-label">g</p>
           <h3 className="ratio-title">Coffee</h3>
         </div>
         <p className="to">to</p>
         <div className="flex-item" id="water-box">
-          <h2 className="ratio-numbers">350 g</h2>
+          <input type="number" className="ratio-numbers" placeholder="350" />
+          <p className="grams-label">g</p>
+
           <h3 id="water-title" className="ratio-title">
             Water
           </h3>
@@ -22,36 +25,81 @@ export default function Pourover() {
       </div>
 
       <main className="main">
-        <form>
-          <h3 className="cup-title">The cup I am using is:</h3>
+        <form className="form">
+          <h3 className="cup-title" id="cups">
+            The cup I am using is:
+            <hr className="cup-underline" />
+          </h3>
 
-          <input type="radio" name="mug-type" value="yeti" id="yeti" />
-          <label for="yeti">Yeti</label>
+          <div className="input-container">
+            <label htmlFor="yeti" className="label-item">
+              <input
+                className="input-item"
+                type="radio"
+                name="mug-type"
+                value="yeti"
+                id="yeti"
+              />
+              Yeti
+            </label>
 
-          <input type="radio" name="mug-type" value="mug-r" id="mug-r" />
-          <label for="mug-r">Mug (regular)</label>
+            <label htmlFor="mug-r" className="label-item">
+              <input
+                className="input-item"
+                type="radio"
+                name="mug-type"
+                value="mug-r"
+                id="mug-r"
+              />
+              Mug (regular)
+            </label>
 
-          <input type="radio" name="mug-type" value="mug-sm" id="mug-sm" />
-          <label for="mug-sm">Mug (small)</label>
+            <label htmlFor="mug-sm" className="label-item">
+              <input
+                className="input-item"
+                type="radio"
+                name="mug-type"
+                value="mug-sm"
+                id="mug-sm"
+              />
+              Mug (small)
+            </label>
 
-          <input type="radio" name="mug-type" value="chemex" id="chemex" />
-          <label for="chemex">Chemex</label>
+            <label htmlFor="chemex" className="label-item">
+              <input
+                className="input-item"
+                type="radio"
+                name="mug-type"
+                value="chemex"
+                id="chemex"
+              />
+              Chemex
+            </label>
+          </div>
 
-          <h3 className="cup-title">Or:</h3>
+          <h3 className="cup-title" id="or-title">
+            Or:
+            <hr className="or-underline" />
+          </h3>
 
           <p className="use-text">
-            Click on the boxes to <b>write</b> the amount of coffee/water you
-            want to use
+            Click on the boxes to <span>write</span> the amount of coffee/water
+            you want to use
           </p>
         </form>
 
         <div className="pourover-knowledge">
-          <h2 className="pourover-title">Pour-Over Knowledge</h2>
+          <h3 className="cup-title" id="pourover-title">
+            Pour-over Knowledge
+            <hr className="cup-underline" />
+          </h3>
           <p className="pourover-text">
             The pour-over is one of easiest and fastest ways to make coffee in
             the morning, but you might think that it is complex. If you do not
-            follow the steps, you might find that your coffee is weak (over
-            extracted) or bitter (over extracted).
+            follow the steps, you might find that your coffee is{" "}
+            <span>weak</span> (over extracted) or <span>bitter</span> (over
+            extracted), but once you get it down once or twice. It's easy and
+            replicable.
           </p>
         </div>
       </main>
