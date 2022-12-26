@@ -1,7 +1,7 @@
 .nav {
   font-family: var(--bfont);
   width: 40vw;
-  height: 100vh;
+  height: 100%;
   border-right: 2px groove black;
   display: flex;
   flex-direction: column;
@@ -22,9 +22,9 @@
 
 .nav-title {
   text-align: center;
-  padding: 25px 0;
-  font-size: 1.3em;
-  white-space: nowrap;
+  padding: 10px 5px;
+  font-size: 1.6em;
+  /* white-space: nowrap; */
   border-bottom: 2px groove black;
   background-color: rgb(225, 183, 132);
 }
@@ -62,7 +62,6 @@
   z-index: 1;
   text-align: right;
   /* left is written as inline css because I couldn't override position with adding another class */
-
   padding: 5px;
   font-size: 1.5em;
   font-family: var(--hfont);

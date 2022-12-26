@@ -1,5 +1,6 @@
 import "../../css/pourover.css";
 import React, { useState, useRef } from "react";
+import pourOverPic from "/pourover-grind.jpg";
 
 export default function Pourover() {
   //these will become numbers, but need to open strings to show placeholders
@@ -147,7 +148,7 @@ export default function Pourover() {
 
           <h3 className="cup-title" id="or-title">
             Or:
-            <hr className="or-underline" />
+            <hr className="cup-underline" id="or-underline-change" />
           </h3>
 
           <p className="use-text">
@@ -156,20 +157,36 @@ export default function Pourover() {
           </p>
         </form>
 
-        <div className="pourover-knowledge">
-          <h3 className="cup-title" id="pourover-title">
-            Pour-over Knowledge
-            <hr className="cup-underline" />
-          </h3>
-          <p className="pourover-text">
-            The pour-over is one of easiest and fastest ways to make coffee in
-            the morning, but you might think that it is complex. If you do not
-            follow the steps, you might find that your coffee is
-            <span> weak</span> (over extracted) or <span>bitter</span> (over
-            extracted), but once you get it down once or twice. It's easy and
-            replicable.
-          </p>
-        </div>
+        <h3 className="cup-title" id="pourover-title">
+          Pour-over Knowledge
+          <hr className="cup-underline" />
+        </h3>
+        <p className="use-text">
+          The pour-over is one of easiest and fastest ways to make coffee in the
+          morning, but you might think that it is complex. If you do not follow
+          the steps, you might find that your coffee is
+          <span> weak</span> (over extracted) or <span>bitter</span> (over
+          extracted), but once you get it down once or twice. It's easy and
+          replicable.
+        </p>
+
+        <h3 className="cup-title" id="grind-size">
+          Grind Size
+          <hr className="cup-underline" />
+        </h3>
+        <p className="use-text">
+          Your grind size is one of the most important factors of making a great
+          pour-over you should be aiming for a
+          <img
+            src={pourOverPic}
+            className="pour-over-pic"
+            alt="pour-over grind size photo"
+          />
+          <span> medium-fine grind size</span>. To check your grind size is the
+          right, grind some beans and run them through your fingers. You should
+          still be able to distinguish which the individual 'chunks' unlike
+          espresso grind.
+        </p>
       </main>
     </div>
   );

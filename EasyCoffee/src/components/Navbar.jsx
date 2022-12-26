@@ -12,6 +12,7 @@ export default function Navbar({ setWebpages }) {
   const navBtn = React.useRef(null);
 
   function closeOpenNavbar() {
+    window.scroll(0, 0);
     nav.current.classList.toggle("left");
     // css 'left' position will not override for buttons?????
     navBtn.current.style.left =

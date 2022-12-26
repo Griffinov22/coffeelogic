@@ -13,6 +13,7 @@ label {
 
 .pourover-container {
   /* background-color: var(--bgColor); */
+  /* margin-bottom: 500px; */
 }
 
 .header {
@@ -50,15 +51,21 @@ label {
   padding: 10px;
 }
 .ratio-numbers {
-  width: 70%;
+  width: 90%;
   font-size: 1.8rem;
-  text-align: right;
+  text-align: center;
   position: relative;
   border: none;
   border-bottom: 3px solid black;
   border-radius: 3px;
   padding-right: 5px;
 }
+.ratio-numbers::-webkit-inner-spin-button,
+.ratio-numbers::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 .grams-label {
   font-size: 1.4rem;
 }
@@ -102,7 +109,6 @@ label {
 }
 #or-title {
   text-align: center;
-  padding-top: 0;
 }
 .cup-underline {
   width: 70%;
@@ -113,12 +119,10 @@ label {
   margin-top: 5px;
   border: none;
 }
-.or-underline {
+#or-underline-change {
   width: 15%;
-  height: 3px;
-  background-color: var(--accentColor);
-  margin: 0 auto;
-  border: none;
+  left: calc(85% / 2);
+  right: calc(85% / 2);
 }
 
 .input-container {
@@ -168,12 +172,37 @@ label {
 .use-text span {
   font-weight: 900;
 }
-
-.pourover-text {
-  padding: 1rem 0;
-  font-size: 1.3rem;
-  text-indent: 1rem;
-}
 .pourover-text span {
   font-weight: 900;
+}
+
+.grind-quote {
+  font-size: 1.2rem;
+  padding: 2% 10%;
+  position: relative;
+}
+.grind-quote::before {
+  content: open-quote;
+  position: absolute;
+  display: block;
+  font-size: 2.5rem;
+  opacity: 0.7;
+  left: 0;
+  top: 0;
+}
+
+.grind-quote::after {
+  content: close-quote;
+  position: absolute;
+  display: block;
+  font-size: 2.5rem;
+  opacity: 0.7;
+  right: 10px;
+  bottom: -17px;
+}
+
+.pour-over-pic {
+  width: 100px;
+  float: right;
+  margin: 10px;
 }
