@@ -15,8 +15,10 @@ export default function Navbar({ setWebpages }) {
     window.scroll(0, 0);
     nav.current.classList.toggle("left");
     // css 'left' position will not override for buttons?????
-    navBtn.current.style.left =
-      navBtn.current.style.left == "-25px" ? "calc(40vw - 25px)" : "-25px";
+    navBtn.current.style.marginLeft =
+      navBtn.current.style.marginLeft == "-25px"
+        ? "calc(40vw - 25px)"
+        : "-25px";
   }
 
   return (
@@ -84,7 +86,7 @@ export default function Navbar({ setWebpages }) {
         ref={navBtn}
         className={`nav-btn`}
         onClick={closeOpenNavbar}
-        style={{ left: "-25px" }}
+        style={{ marginLeft: "-25px" }}
       >
         &gt;
       </button>

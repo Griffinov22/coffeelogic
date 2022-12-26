@@ -1,11 +1,12 @@
 .nav {
   font-family: var(--bfont);
   width: 40vw;
-  height: 100%;
+  height: 100vh;
   border-right: 2px groove black;
   display: flex;
   flex-direction: column;
   position: absolute;
+  top: 0;
   left: 0;
   transition: left 600ms ease-in-out;
   z-index: 2;
@@ -51,7 +52,8 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  position: absolute;
+  position: sticky;
+  position: -webkit-sticky;
   width: 50px;
   aspect-ratio: 1/1;
   border-radius: 50%;
@@ -61,11 +63,11 @@
   transform: translateY(-50%);
   z-index: 1;
   text-align: right;
-  /* left is written as inline css because I couldn't override position with adding another class */
+  /* margin left has to be written as inline for it to be read by React */
   padding: 5px;
   font-size: 1.5em;
   font-family: var(--hfont);
   font-weight: bold;
   cursor: pointer;
-  transition: left 600ms ease-in-out;
+  transition: margin-left 600ms ease-in-out;
 }
