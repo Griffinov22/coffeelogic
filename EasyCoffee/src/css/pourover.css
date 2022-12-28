@@ -3,6 +3,7 @@
 h2,
 h3,
 p,
+ol,
 label {
   font-family: var(--bfont);
 }
@@ -96,8 +97,9 @@ label {
 }
 
 .main {
-  padding-inline: 1.5rem;
+  padding-inline: 2rem;
   margin-top: 2rem;
+  margin-bottom: 10vh;
 }
 
 .cup-title {
@@ -205,4 +207,42 @@ label {
   width: 100px;
   float: right;
   margin: 10px;
+}
+
+.pour-list {
+  padding: 1rem 1.5rem;
+  font-size: 1.3rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+}
+
+.pour-list li span {
+  font-weight: 900;
+}
+
+.pour-list li::marker {
+  font-weight: 900;
+  font-style: italic;
+}
+
+.temps-list {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+  list-style: none;
+  white-space: nowrap;
+}
+.temps-list li::before {
+  content: "";
+  width: 8px;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  background-color: var(--bgColor);
+  display: inline-block;
+  text-align: center;
+  margin-right: 0.5rem;
+  margin-block: 2px;
 }
