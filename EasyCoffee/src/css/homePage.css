@@ -38,7 +38,6 @@ h3 {
 .triangle {
   position: absolute;
   bottom: 0;
-  z-index: 1;
   width: 0;
   border: 10vw solid transparent;
   border-bottom: 10vw solid white;
@@ -52,8 +51,13 @@ h3 {
   border-right: 10vw solid white;
 }
 
+.main {
+  padding-bottom: 20vh;
+  background-color: white;
+}
+
 .welcome-text {
-  margin-top: 10vh;
+  transform: translateY(50px);
   opacity: 0;
   transition: all 800ms ease-in-out;
 }

@@ -12,7 +12,7 @@ export default function HomePage() {
       const [entry] = entries;
       if (entry.isIntersecting) {
         welcomeText.current.style.opacity = "1";
-        welcomeText.current.style.marginTop = "0px";
+        welcomeText.current.style.transform = "translateY(0px)";
       }
     },
     { threshold: "1.0", rootMargin: "0px" }
