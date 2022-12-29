@@ -30,6 +30,10 @@ h3 {
   font-family: var(--bfont);
 }
 
+.header {
+  position: relative;
+}
+
 .header-pic {
   display: block;
   width: 100vw;
@@ -47,6 +51,7 @@ h3 {
   writing-mode: vertical-rl;
   text-orientation: upright;
   letter-spacing: -1rem;
+  word-spacing: 10px;
   background-color: white;
   padding-bottom: 20px;
   padding-top: 40px;
@@ -57,16 +62,16 @@ h3 {
   position: absolute;
   bottom: 0;
   width: 0;
-  border: 10vw solid transparent;
-  border-bottom: 10vw solid white;
+  border: 20vw solid transparent;
+  border-bottom: 20vw solid white;
 }
 #left-triangle {
   left: 0;
-  border-left: 10vw solid white;
+  border-left: 20vw solid white;
 }
 #right-triangle {
   right: 0;
-  border-right: 10vw solid white;
+  border-right: 20vw solid white;
 }
 
 .main {
