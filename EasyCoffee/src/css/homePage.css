@@ -50,8 +50,8 @@ h3 {
   color: var(--bgColor);
   writing-mode: vertical-rl;
   text-orientation: upright;
-  letter-spacing: -1rem;
-  word-spacing: 10px;
+  letter-spacing: -16px;
+  /* word-spacing: 1rem; */
   background-color: white;
   padding-bottom: 20px;
   padding-top: 40px;
