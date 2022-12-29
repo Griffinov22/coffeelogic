@@ -1,0 +1,75 @@
+html::-webkit-scrollbar {
+  display: none;
+}
+
+h1,
+h2 {
+  font-family: var(--hfont);
+}
+
+p,
+h3 {
+  font-family: var(--bfont);
+}
+
+.header-pic {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+.title {
+  position: absolute;
+  top: -40px;
+  right: 35px;
+  font-size: 3rem;
+  color: var(--bgColor);
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  letter-spacing: -1rem;
+  background-color: white;
+  padding-bottom: 20px;
+  padding-top: 40px;
+  border-radius: 100vw;
+}
+
+.triangle {
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
+  width: 0;
+  border: 10vw solid transparent;
+  border-bottom: 10vw solid white;
+}
+#left-triangle {
+  left: 0;
+  border-left: 10vw solid white;
+}
+#right-triangle {
+  right: 0;
+  border-right: 10vw solid white;
+}
+
+.welcome-text {
+  margin-top: 10vh;
+  opacity: 0;
+  transition: all 800ms ease-in-out;
+}
+
+.welcome-text h2 {
+  font-size: clamp(2rem, 5vw + 1rem, 10rem);
+  color: var(--bgColor);
+}
+.welcome-text h2 span {
+  font-weight: 900;
+  font-style: italic;
+}
+.welcome-text h3 {
+  text-align: right;
+  padding-top: 10px;
+  font-style: italic;
+  color: rgba(0 0 0 / 0.6);
+  font-weight: 900;
+}
