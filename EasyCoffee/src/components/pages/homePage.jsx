@@ -24,7 +24,7 @@ export default function HomePage() {
 
   return (
     <>
-      <header className="header">
+      <header className="header-homepage">
         <img className="header-pic" src={headerPhoto} alt="" />
         <h1 className="title">Easy Coffee</h1>
         <div className="triangle" id="left-triangle"></div>
