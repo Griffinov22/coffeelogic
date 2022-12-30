@@ -29,9 +29,17 @@ export default function HomePage() {
         <h1 className="title">Easy Coffee</h1>
         <div className="triangle" id="left-triangle"></div>
         <div className="triangle" id="right-triangle"></div>
+        <h2
+          className="arrow-down"
+          onClick={() => {
+            location.href = "#welcome";
+          }}
+        >
+          ↓
+        </h2>
       </header>
       <main className="main">
-        <div className="welcome-text" ref={welcomeText}>
+        <div id="welcome" className="welcome-text" ref={welcomeText}>
           <h2>
             Welcome to <span>Coffee</span> made <span>Easy</span>
           </h2>

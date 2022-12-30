@@ -16,7 +16,10 @@
 }
 
 html::-webkit-scrollbar {
-  display: hidden;
+  display: none;
+}
+html {
+  scroll-behavior: smooth;
 }
 /* Starter */
 
@@ -36,7 +39,7 @@ h3 {
 
 .header-pic {
   display: block;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   object-fit: cover;
   overflow: hidden;
@@ -74,6 +77,38 @@ h3 {
   border-right: 20vw solid white;
 }
 
+.arrow-down {
+  position: absolute;
+  width: 100px;
+  text-align: center;
+  bottom: 10vh;
+  -webkit-text-stroke: 3px white;
+  color: white;
+  font-size: 4rem;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  animation-name: arrow-bob;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+}
+
+@keyframes arrow-bob {
+  0% {
+    transform: translateY(0%);
+  }
+  50% {
+    transform: translateY(-10%);
+  }
+  75% {
+    transform: translateY(2%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
 .main {
   padding-bottom: 20vh;
   background-color: white;
@@ -82,16 +117,18 @@ h3 {
 .welcome-text {
   transform: translateY(50px);
   opacity: 0;
-  transition: all 800ms ease-in-out;
+  transition: all 1200ms ease-in-out;
 }
 
 .welcome-text h2 {
-  font-size: clamp(2rem, 5vw + 1rem, 10rem);
+  font-size: clamp(2rem, 5vw + 1.5rem, 10rem);
   color: var(--bgColor);
 }
 .welcome-text h2 span {
   font-weight: 900;
   font-style: italic;
+  text-decoration: underline;
+  letter-spacing: 0.05em;
 }
 .welcome-text h3 {
   text-align: right;

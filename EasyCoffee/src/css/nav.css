@@ -28,6 +28,7 @@
   border-bottom: 2px groove black;
   background-color: rgb(225, 183, 132);
   z-index: 3;
+  cursor: pointer;
 }
 
 .nav-lst {

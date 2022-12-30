@@ -24,6 +24,7 @@ h2,
 h3,
 p,
 ol,
+ul,
 label {
   font-family: var(--bfont);
 }
@@ -116,10 +117,8 @@ label {
   font-weight: 900;
 }
 
-.main {
-  padding-inline: 2rem;
-  margin-top: 2rem;
-  margin-bottom: 10vh;
+.main-pourover {
+  padding: 2rem;
 }
 
 .cup-title {

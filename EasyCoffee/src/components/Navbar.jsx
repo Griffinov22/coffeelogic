@@ -6,6 +6,7 @@ import Espresso from "./pages/espresso";
 import Tea from "./pages/tea";
 import CoffeeTerms from "./pages/coffeeTerms";
 import CoffeeDrinks from "./pages/coffeeDrinks";
+import HomePage from "./pages/homePage";
 
 export default function Navbar({ setWebpages }) {
   const nav = React.useRef(null);
@@ -21,63 +22,38 @@ export default function Navbar({ setWebpages }) {
       navBtn.current.style.marginLeft === "40vw" ? "0" : "40vw";
   }
 
+  function goToPage(jsxEl) {
+    closeOpenNavbar();
+    window.scroll(0, 0);
+    setWebpages(jsxEl);
+  }
+
   return (
     <>
       <nav className="nav" ref={nav} style={{ marginLeft: "-40vw" }}>
         <div className="nav-menu">
-          <h2 className="nav-title">What's Brewin'?</h2>
+          <h2 className="nav-title" onClick={() => goToPage(<HomePage />)}>
+            What's Brewin'?
+          </h2>
           <ul className="nav-lst">
-            <li
-              className="list-item"
-              onClick={() => {
-                closeOpenNavbar();
-                setWebpages(<Pourover />);
-              }}
-            >
+            <li className="list-item" onClick={() => goToPage(<Pourover />)}>
               Pour Over Coffee
             </li>
-            <li
-              className="list-item"
-              onClick={() => {
-                closeOpenNavbar();
-                setWebpages(<FrenchPress />);
-              }}
-            >
+            <li className="list-item" onClick={() => goToPage(<FrenchPress />)}>
               French Press
             </li>
-            <li
-              className="list-item"
-              onClick={() => {
-                closeOpenNavbar();
-                setWebpages(<Espresso />);
-              }}
-            >
+            <li className="list-item" onClick={() => goToPage(<Espresso />)}>
               Espresso
             </li>
-            <li
-              className="list-item"
-              onClick={() => {
-                closeOpenNavbar();
-                setWebpages(<Tea />);
-              }}
-            >
+            <li className="list-item" onClick={() => goToPage(<Tea />)}>
               Tea
             </li>
-            <li
-              className="list-item"
-              onClick={() => {
-                closeOpenNavbar();
-                setWebpages(<CoffeeTerms />);
-              }}
-            >
+            <li className="list-item" onClick={() => goToPage(<CoffeeTerms />)}>
               Griffin's Crazy Coffee Terms
             </li>
             <li
               className="list-item"
-              onClick={() => {
-                closeOpenNavbar();
-                setWebpages(<CoffeeDrinks />);
-              }}
+              onClick={() => goToPage(<CoffeeDrinks />)}
             >
               How did Griffin Make That Drink?
             </li>
