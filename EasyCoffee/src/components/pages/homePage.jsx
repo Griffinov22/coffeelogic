@@ -6,20 +6,25 @@ import React from "react";
 export default function HomePage() {
   const headerPhoto = Math.random() > 0.5 ? latteArt1 : latteArt2;
   const welcomeText = React.useRef(null);
+  const main = React.useRef(null);
 
   const observer = new IntersectionObserver(
     function (entries, observer) {
-      const [entry] = entries;
-      if (entry.isIntersecting) {
-        welcomeText.current.style.opacity = "1";
-        welcomeText.current.style.transform = "translateY(0px)";
-      }
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = "1";
+          entry.target.style.transform = "translateY(0px)";
+        }
+      });
     },
     { threshold: "1.0", rootMargin: "0px" }
   );
 
   React.useEffect(() => {
-    observer.observe(welcomeText.current);
+    // observer.observe(welcomeText.current);
+    for (let i = 0; i < main.current.children.length; i++) {
+      observer.observe(main.current.children[i]);
+    }
   }, []);
 
   return (
@@ -38,8 +43,8 @@ export default function HomePage() {
           ↓
         </h2>
       </header>
-      <main className="main">
-        <div id="welcome" className="welcome-text" ref={welcomeText}>
+      <main className="main-homepage" ref={main}>
+        <div id="welcome" className="welcome-text fader" ref={welcomeText}>
           <h2>
             Welcome to <span>Coffee</span> made <span>Easy</span>
           </h2>

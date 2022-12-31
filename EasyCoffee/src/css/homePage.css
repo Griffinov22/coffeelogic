@@ -40,24 +40,24 @@ h3 {
 .header-pic {
   display: block;
   width: 100%;
-  height: 100vh;
+  height: 90vh;
   object-fit: cover;
   overflow: hidden;
 }
 
 .title {
   position: absolute;
-  top: -40px;
+  top: -20px;
   right: 35px;
-  font-size: 3rem;
+  font-size: 2rem;
   color: var(--bgColor);
   writing-mode: vertical-rl;
   text-orientation: upright;
-  letter-spacing: -16px;
-  word-spacing: 2rem;
+  letter-spacing: -6px;
+  word-spacing: 0.25rem;
   background-color: white;
   padding-bottom: 20px;
-  padding-top: 40px;
+  padding-top: 20px;
   border-radius: 100vw;
 }
 
@@ -109,15 +109,14 @@ h3 {
   }
 }
 
-.main {
+.main-homepage {
+  padding: 2rem;
   padding-bottom: 20vh;
   background-color: white;
 }
 
 .welcome-text {
-  transform: translateY(50px);
-  opacity: 0;
-  transition: all 1200ms ease-in-out;
+  padding-top: 1rem;
 }
 
 .welcome-text h2 {
@@ -131,9 +130,16 @@ h3 {
   letter-spacing: 0.05em;
 }
 .welcome-text h3 {
-  text-align: right;
+  text-align: left;
   padding-top: 10px;
   font-style: italic;
   color: rgba(0 0 0 / 0.6);
   font-weight: 900;
+}
+
+/* add fader to all elements in main to setup the slide in effect */
+.fader {
+  transform: translateY(50px);
+  opacity: 0;
+  transition: all 1200ms ease-in-out;
 }
