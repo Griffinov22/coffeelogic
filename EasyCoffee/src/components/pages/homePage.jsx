@@ -13,7 +13,7 @@ export default function HomePage() {
   const hours = time.getHours() === 12 ? "12" : time.getHours() % 12;
   const minutes =
     time.getMinutes() < 10
-      ? time.getMinutes().padStart(1, 0)
+      ? String(time.getMinutes()).padStart(1, "0")
       : time.getMinutes();
   const shouldDrinkCoffee = new Date().getHours() > 16;
   console.log(shouldDrinkCoffee);
