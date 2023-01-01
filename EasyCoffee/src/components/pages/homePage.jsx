@@ -15,7 +15,7 @@ export default function HomePage() {
     time.getMinutes() < 10
       ? String(time.getMinutes()).padStart(1, "0")
       : time.getMinutes();
-  const shouldDrinkCoffee = new Date().getHours() > 16;
+  const shouldDrinkCoffee = new Date().getHours() < 16;
   console.log(shouldDrinkCoffee);
 
   const observer = new IntersectionObserver(
@@ -73,11 +73,11 @@ export default function HomePage() {
             />
             <p className={styles["sub-text"]}>
               According to your time,
-              <span style={{ color: shouldDrinkCoffee ? "red" : "#d9b382" }}>
+              <span style={{ color: shouldDrinkCoffee ? "#d9b382" : "red" }}>
                 {" " + hours + ":" + minutes}
               </span>
-              , you {`should${shouldDrinkCoffee ? "" : "n't"}`} drink coffee
-              right now.
+              , you {shouldDrinkCoffee ? "can" : "shouldn't"} drink coffee right
+              now.
             </p>
           </div>
           {!shouldDrinkCoffee && (

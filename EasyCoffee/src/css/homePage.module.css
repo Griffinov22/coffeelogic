@@ -147,7 +147,7 @@ html {
 
 .flex-box {
   display: flex;
-
+  align-items: center;
   column-gap: 1rem;
 }
 .flex-img {
