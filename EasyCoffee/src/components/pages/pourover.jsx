@@ -1,4 +1,4 @@
-import "../../css/pourover.css";
+import styles from "../../css/pourover.module.css";
 import React, { useState, useRef } from "react";
 import pourOverPic from "/pourover-grind.jpg";
 
@@ -47,98 +47,98 @@ export default function Pourover() {
   }
 
   return (
-    <div className="pourover-container">
-      <div className="header">
+    <div className={styles.pouroverContainer}>
+      <div className={styles.header}>
         <h1>Pour-Over Ratio</h1>
       </div>
 
-      <div className="flex-coffee-boxes">
-        <div className="flex-item" id="coffee-box">
+      <div className={styles["flex-coffee-boxes"]}>
+        <div className={styles["flex-item"]} id={styles["coffee-box"]}>
           <input
             type="number"
-            className="ratio-numbers"
+            className={styles["ratio-numbers"]}
             placeholder="18"
             name="coffeeLabel"
             value={labels.coffeeLabel}
             onChange={userChange}
           />
-          <p className="grams-label">g</p>
-          <h3 className="ratio-title" id="coffee-title">
+          <p className={styles["grams-label"]}>g</p>
+          <h3 className={styles["ratio-title"]} id={styles["coffee-title"]}>
             Coffee
           </h3>
         </div>
-        <p className="to">to</p>
-        <div className="flex-item" id="water-box">
+        <p className={styles["to"]}>to</p>
+        <div className={styles["flex-item"]} id={styles["water-box"]}>
           <input
             type="number"
-            className="ratio-numbers"
+            className={styles["ratio-numbers"]}
             placeholder="350"
             name="waterLabel"
             value={labels.waterLabel}
             onChange={userChange}
           />
-          <p className="grams-label">g</p>
+          <p className={styles["grams-label"]}>g</p>
 
-          <h3 id="water-title" className="ratio-title">
+          <h3 id={styles["water-title"]} className={styles["ratio-title"]}>
             Water
           </h3>
         </div>
       </div>
 
-      <main className="main-pourover">
-        <form className="form">
-          <h3 className="cup-title" id="cups">
+      <main className={styles["main-pourover"]}>
+        <form className={styles["form"]}>
+          <h3 className={styles["cup-title"]} id={styles["cups"]}>
             The cup I am using is:
-            <hr className="cup-underline" />
+            <hr className={styles["cup-underline"]} />
           </h3>
 
-          <div className="input-container">
-            <label htmlFor="yeti" className="label-item">
+          <div className={styles["input-container"]}>
+            <label htmlFor={styles["yeti"]} className={styles["label-item"]}>
               <input
-                className="input-item"
+                className={styles["input-item"]}
                 type="radio"
                 name="mugType"
                 value="yeti"
-                id="yeti"
+                id={styles["yeti"]}
                 checked={labels.mugType === "yeti"}
                 onChange={changeRadio}
               />
               Yeti
             </label>
 
-            <label htmlFor="mug-r" className="label-item">
+            <label htmlFor={styles["mug-r"]} className={styles["label-item"]}>
               <input
-                className="input-item"
+                className={styles["input-item"]}
                 type="radio"
                 name="mugType"
                 value="mug-r"
-                id="mug-r"
+                id={styles["mug-r"]}
                 checked={labels.mugType === "mug-r"}
                 onChange={changeRadio}
               />
               Mug (regular)
             </label>
 
-            <label htmlFor="mug-sm" className="label-item">
+            <label htmlFor={styles["mug-sm"]} className={styles["label-item"]}>
               <input
-                className="input-item"
+                className={styles["input-item"]}
                 type="radio"
                 name="mugType"
                 value="mug-sm"
-                id="mug-sm"
+                id={styles["mug-sm"]}
                 checked={labels.mugType === "mug-sm"}
                 onChange={changeRadio}
               />
               Mug (small)
             </label>
 
-            <label htmlFor="chemex" className="label-item">
+            <label htmlFor={styles["chemex"]} className={styles["label-item"]}>
               <input
-                className="input-item"
+                className={styles["input-item"]}
                 type="radio"
                 name="mugType"
                 value="chemex"
-                id="chemex"
+                id={styles["chemex"]}
                 checked={labels.mugType === "chemex"}
                 onChange={changeRadio}
               />
@@ -146,22 +146,25 @@ export default function Pourover() {
             </label>
           </div>
 
-          <h3 className="cup-title" id="or-title">
+          <h3 className={styles["cup-title"]} id={styles["or-title"]}>
             Or:
-            <hr className="cup-underline" id="or-underline-change" />
+            <hr
+              className={styles["cup-underline"]}
+              id={styles["or-underline-change"]}
+            />
           </h3>
 
-          <p className="use-text">
+          <p className={styles["use-text"]}>
             Click on the boxes to <span>write</span> the amount of coffee/water
             you want to use
           </p>
         </form>
 
-        <h3 className="cup-title" id="pourover-title">
+        <h3 className={styles["cup-title"]} id={styles["pourover-title"]}>
           Pour-over Knowledge
-          <hr className="cup-underline" />
+          <hr className={styles["cup-underline"]} />
         </h3>
-        <p className="use-text">
+        <p className={styles["use-text"]}>
           The pour-over is one of easiest and fastest ways to make coffee in the
           morning, but you might think that it is complex. If you do not follow
           the steps, you might find that your coffee is
@@ -170,16 +173,16 @@ export default function Pourover() {
           replicable.
         </p>
 
-        <h3 className="cup-title" id="grind-size">
+        <h3 className={styles["cup-title"]} id={styles["grind-size"]}>
           Grind Size
-          <hr className="cup-underline" />
+          <hr className={styles["cup-underline"]} />
         </h3>
-        <p className="use-text">
+        <p className={styles["use-text"]}>
           Your grind size is one of the most important factors of making a great
           pour-over you should be aiming for a
           <img
             src={pourOverPic}
-            className="pour-over-pic"
+            className={styles["pour-over-pic"]}
             alt="pour-over grind size photo"
           />
           <span> medium-fine grind size</span>. To check your grind size is the
@@ -188,14 +191,14 @@ export default function Pourover() {
           espresso grind.
         </p>
 
-        <h3 className="cup-title">
+        <h3 className={styles["cup-title"]}>
           Pour-over Procedure
-          <hr className="cup-underline" />
+          <hr className={styles["cup-underline"]} />
         </h3>
-        <p className="use-text">
+        <p className={styles["use-text"]}>
           We are going to do this in X simple steps. Let's begin:
         </p>
-        <ol className="pour-list">
+        <ol className={styles["pour-list"]}>
           <li>
             Take your filter and fold it along the seam. Open the paper and
             place the filter inside the brewing device.
@@ -213,7 +216,7 @@ export default function Pourover() {
             Great now add your grinded coffee following the 'Grind Size' section
             above, and prepare your water to approximately 198° If you want to
             get more from your brew:
-            <ul className="temps-list">
+            <ul className={styles["temps-list"]}>
               <li>
                 Dark Roast: <span>195-200</span>
               </li>
@@ -253,10 +256,10 @@ export default function Pourover() {
             to dispense in ~2:45-3:00
           </li>
         </ol>
-        <p className="use-text">
+        <p className={styles["use-text"]}>
           A simple timeline for your brew should look like this:
         </p>
-        <ul className="temps-list">
+        <ul className={styles["temps-list"]}>
           <li>Blume Phase: (0-45s)</li>
           <li>Second Pour: (45-1:10)</li>
           <li>Third Pour: (1:10-1:30)</li>

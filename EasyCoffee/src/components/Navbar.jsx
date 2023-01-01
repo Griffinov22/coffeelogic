@@ -1,5 +1,5 @@
 import React from "react";
-import "../css/nav.css";
+import styles from "../css/nav.module.css";
 import Pourover from "./pages/pourover";
 import FrenchPress from "./pages/frenchPress";
 import Espresso from "./pages/espresso";
@@ -30,29 +30,47 @@ export default function Navbar({ setWebpages }) {
 
   return (
     <>
-      <nav className="nav" ref={nav} style={{ marginLeft: "-40vw" }}>
-        <div className="nav-menu">
-          <h2 className="nav-title" onClick={() => goToPage(<HomePage />)}>
+      <nav className={styles["nav"]} ref={nav} style={{ marginLeft: "-40vw" }}>
+        <div className={styles["nav-menu"]}>
+          <h2
+            className={styles["nav-title"]}
+            onClick={() => goToPage(<HomePage />)}
+          >
             What's Brewin'?
           </h2>
-          <ul className="nav-lst">
-            <li className="list-item" onClick={() => goToPage(<Pourover />)}>
+          <ul className={styles["nav-lst"]}>
+            <li
+              className={styles["list-item"]}
+              onClick={() => goToPage(<Pourover />)}
+            >
               Pour Over Coffee
             </li>
-            <li className="list-item" onClick={() => goToPage(<FrenchPress />)}>
+            <li
+              className={styles["list-item"]}
+              onClick={() => goToPage(<FrenchPress />)}
+            >
               French Press
             </li>
-            <li className="list-item" onClick={() => goToPage(<Espresso />)}>
+            <li
+              className={styles["list-item"]}
+              onClick={() => goToPage(<Espresso />)}
+            >
               Espresso
             </li>
-            <li className="list-item" onClick={() => goToPage(<Tea />)}>
+            <li
+              className={styles["list-item"]}
+              onClick={() => goToPage(<Tea />)}
+            >
               Tea
             </li>
-            <li className="list-item" onClick={() => goToPage(<CoffeeTerms />)}>
+            <li
+              className={styles["list-item"]}
+              onClick={() => goToPage(<CoffeeTerms />)}
+            >
               Griffin's Crazy Coffee Terms
             </li>
             <li
-              className="list-item"
+              className={styles["list-item"]}
               onClick={() => goToPage(<CoffeeDrinks />)}
             >
               How did Griffin Make That Drink?
@@ -61,7 +79,7 @@ export default function Navbar({ setWebpages }) {
         </div>
         <button
           ref={navBtn}
-          className={`nav-btn`}
+          className={styles["nav-btn"]}
           onClick={closeOpenNavbar}
           style={{ marginLeft: "0" }}
         >
