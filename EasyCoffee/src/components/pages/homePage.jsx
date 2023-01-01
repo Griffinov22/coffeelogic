@@ -54,7 +54,11 @@ export default function HomePage() {
         </h2>
       </header>
       <main className={styles["main-homepage"]} ref={main}>
-        <section id="welcome" className={styles["fader"]} ref={welcomeText}>
+        <section
+          id="welcome"
+          className={styles["fader"] + " " + styles["home-section"]}
+          ref={welcomeText}
+        >
           <h2 className={styles["header-text"]}>
             Welcome to <span>Coffee</span> made <span>Easy</span>
           </h2>
