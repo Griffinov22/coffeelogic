@@ -1,0 +1,80 @@
+.title {
+  text-align: center;
+  font-size: 2rem;
+  padding: 1rem;
+  font-family: var(--hfont);
+  font-weight: 600;
+}
+.flex {
+  display: flex;
+  position: relative;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: center;
+  padding-inline: 2rem;
+  padding-top: 3rem;
+  padding-bottom: 1.5rem;
+  background-color: rgb(225, 225, 225);
+}
+.flex-header {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 1rem;
+  font-family: var(--hfont);
+  font-weight: 500;
+  color: rgb(46, 46, 46);
+}
+.flex-item {
+  width: calc(100% / 3 - 0.5rem);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.flex-item h2 {
+  font-size: 1rem;
+  font-variant: small-caps;
+  line-height: 1;
+  white-space: nowrap;
+}
+.flex-item p {
+  color: grey;
+  font-size: 0.8rem;
+  white-space: nowrap;
+}
+.flex-item img {
+  width: 45px;
+  aspect-ratio: 1/1;
+}
+
+.section-header {
+  composes: cup-title from "./pourover.module.css";
+}
+.underline {
+  composes: cup-underline from "./pourover.module.css";
+  width: 40%;
+}
+.underline-left {
+  left: 0;
+  width: 10%;
+}
+
+.paragraph {
+  composes: use-text from "./pourover.module.css";
+  font-size: 1.2rem;
+}
+
+.link {
+  color: var(--accentColor);
+}
+
+.jump-to-section {
+  text-decoration: underline;
+  font-weight: 400;
+  color: var(--accentColor);
+}

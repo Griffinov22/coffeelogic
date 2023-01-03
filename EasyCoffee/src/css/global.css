@@ -1,0 +1,16 @@
+main {
+  padding: 2rem;
+}
+
+h2,
+h3,
+p,
+ol,
+ul,
+label {
+  font-family: var(--bfont);
+}
+
+* {
+  color: var(--textColor);
+}

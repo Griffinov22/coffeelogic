@@ -20,19 +20,6 @@ html::-webkit-scrollbar {
 }
 /* Starter */
 
-h2,
-h3,
-p,
-ol,
-ul,
-label {
-  font-family: var(--bfont);
-}
-
-* {
-  color: var(--textColor);
-}
-
 .pouroverContainer {
   /* background-color: var(--bgColor); */
   /* margin-bottom: 500px; */

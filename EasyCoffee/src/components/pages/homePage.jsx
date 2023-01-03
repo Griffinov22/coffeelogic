@@ -16,7 +16,6 @@ export default function HomePage() {
       ? String(time.getMinutes()).padStart(1, "0")
       : time.getMinutes();
   const shouldDrinkCoffee = new Date().getHours() < 16;
-  console.log(shouldDrinkCoffee);
 
   const observer = new IntersectionObserver(
     function (entries, observer) {

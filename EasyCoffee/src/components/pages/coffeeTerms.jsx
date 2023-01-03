@@ -1,7 +1,7 @@
 export default function CoffeeTerms() {
   return (
     <div>
-      <h1>coffeeTerms</h1>
+      <h1>coffee Terms</h1>
     </div>
   );
 }
