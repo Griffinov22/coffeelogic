@@ -205,12 +205,12 @@ export default function Pourover() {
           </li>
           <li>
             Pour hot water over the filter to stick the filter to the sides of
-            the brewing device. Pro tip:
+            the brewing device. Pro tip:{" "}
             <span>
               Use hot water from the sink to get the paper stuck to the sides of
-              the device
-            </span>
-            . This way you save hot water for your actual brew.
+              the device.
+            </span>{" "}
+            This way you save hot water for your actual brew.
           </li>
           <li>
             Great now add your grinded coffee following the 'Grind Size' section

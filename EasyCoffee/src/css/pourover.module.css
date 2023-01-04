@@ -175,7 +175,7 @@ html::-webkit-scrollbar {
 .use-text {
   text-indent: 1rem;
   font-size: 1.3rem;
-  margin-bottom: 1rem;
+  margin-block: 1rem;
 }
 .use-text span {
   font-weight: 900;
@@ -218,6 +218,7 @@ html::-webkit-scrollbar {
 .pour-list {
   padding: 1rem 1.5rem;
   font-size: 1.3rem;
+  font-weight: 600;
   display: flex;
   flex-direction: column;
   row-gap: 15px;

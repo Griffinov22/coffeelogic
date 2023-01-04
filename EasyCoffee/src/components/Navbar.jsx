@@ -47,7 +47,9 @@ export default function Navbar({ setWebpages }) {
             </li>
             <li
               className={styles["list-item"]}
-              onClick={() => goToPage(<FrenchPress />)}
+              onClick={() =>
+                goToPage(<FrenchPress setWebpages={setWebpages} />)
+              }
             >
               French Press
             </li>
