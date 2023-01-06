@@ -5,6 +5,7 @@
   font-family: var(--hfont);
   font-weight: 600;
 }
+
 .flex {
   display: flex;
   position: relative;

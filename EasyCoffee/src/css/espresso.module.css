@@ -1,0 +1,48 @@
+.title {
+  composes: title from "./frenchPress.module.css";
+  padding-bottom: 0;
+}
+
+.sub-title {
+  text-align: center;
+  font-size: 1rem;
+  font-family: var(--bfont);
+  font-weight: 500;
+  color: rgb(180, 180, 180);
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+.flex {
+  composes: flex from "./frenchPress.module.css";
+}
+
+.flex-header {
+  composes: flex-header from "./frenchPress.module.css";
+}
+.flex-item {
+  composes: flex-item from "./frenchPress.module.css";
+}
+
+.flex-item h2 {
+  white-space: normal;
+}
+.flex-item p {
+  white-space: normal;
+  line-height: 1.2;
+}
+.img-top-margin {
+  margin-top: 5px;
+}
+
+.section-header {
+  composes: cup-title from "./pourover.module.css";
+}
+.underline {
+  composes: cup-underline from "./pourover.module.css";
+  width: 40%;
+}
+.paragraph {
+  composes: use-text from "./pourover.module.css";
+  font-size: 1.2rem;
+}
