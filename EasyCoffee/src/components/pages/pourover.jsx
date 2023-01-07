@@ -188,7 +188,9 @@ export default function Pourover() {
           <span> medium-fine grind size</span>. To check your grind size is the
           right, grind some beans and run them through your fingers. You should
           still be able to distinguish which the individual 'chunks' unlike
-          espresso grind.
+          espresso grind. The <span>grind range</span> you are looking for on
+          the Baratza Encore is between <span>22-26</span>. Darker roasts should
+          be coarser than light roasts most.
         </p>
 
         <h3 className={styles["cup-title"]}>

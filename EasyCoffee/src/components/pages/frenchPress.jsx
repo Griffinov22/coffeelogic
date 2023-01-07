@@ -56,7 +56,9 @@ export default function FrenchPress({ setWebpages }) {
               "...the rule is simple: the more coarse your grounds are, the
               better."
             </a>{" "}
-            While this is true, shoot for a size of chunky sea salt.
+            While this is true, shoot for a size of chunky sea salt. On the
+            Baratza Encore, I would shoot for a grind range of{" "}
+            <span>24-30</span>.
           </p>
         </section>
         <section className={s.section}>
