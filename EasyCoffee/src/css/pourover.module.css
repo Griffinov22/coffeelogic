@@ -57,13 +57,12 @@ html::-webkit-scrollbar {
   justify-content: flex-start;
   align-items: center;
   position: relative;
-  padding: 10px;
+  padding: 6px;
 }
 .ratio-numbers {
-  width: 90%;
+  width: 100%;
   font-size: 1.8rem;
   text-align: center;
-  position: relative;
   border: none;
   border-bottom: 3px solid black;
   border-radius: 3px;
